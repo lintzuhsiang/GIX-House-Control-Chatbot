@@ -1,0 +1,56 @@
+<head>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script type="text/javascript" src="../static/js/firebase.js"></script>
+  <script type="text/javascript" src="../static/js/googletextapi.js"></script>
+      <script type="text/javascript" src="../static/js/camera.js"></script>
+    <script type="text/javascript" src="../static/js/face.js"></script>
+    <script type="text/javascript" src="../static/js/QA.js"></script>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+ 
+</head>
+<body onload="main()">
+<div id="camera_canvas">
+ <img id ="myImage"/>
+  <canvas id="mainCanvas">
+
+  </canvas>
+
+<div id="CanvasLight"></div>
+</div>
+
+    <div class="wrapper">
+      <h1> Robot Control UI </h1>
+      <svg id="canvas"></svg>
+      <div id="main">
+        <div id="output">
+        <!-- <input type="text" name="speakText" value="What is your name?" id="RobotText" x-webkit-speech> -->
+          <div id="RobotText1" class="RobotResponse"> <h1 id="RobotText">I am happy </h1></div>
+          <div  class="RobotResponse2"><h1 id="detectItem"></h1></div>
+        <div id="analysis"></div>
+        <div id="output_data">
+          <input type="button" id="translate" value="Translate sentence" onclick="translateAndSpeak()">
+          <input type="button" id="sentiment" value="Get Sentiment" onclick="SentimentAndSpeak()">
+        </div>
+        </div>
+
+        <input type="text" id="InputText" value="Your Response Here.">
+        <div id="input_data">
+        <input type="button" id="speech" value="Voice input" onclick="SpeechToText()">
+        </div>
+        <input type="button" id="SendData" value="Send Data" onclick="SendData()">
+      </div>
+
+      <!--<div id="camera"></div>-->
+      <!--<img  id="myImage"/>-->
+      <video hidden=true id="myVideo" width="640" height="480" autoplay></video>
+        <div id="below">
+        <input type="button" id="QA" value="Start QA" onclick="startQA()">
+      <input type="button" id="camera" value="Open Camera" onclick="OpenCamera()">
+        </div>
+
+    </div>
+
+</body>
